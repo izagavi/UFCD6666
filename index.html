@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloudMind</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: radial-gradient(circle at top, #1e3a8a, #020617);
+        color: white;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: rgba(2, 6, 23, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #a78bfa;
+        text-shadow: 0 0 10px #a78bfa;
+    }
+
+    /* HERO COM EFEITO FUTURISTA */
+    .hero {
+        text-align: center;
+        padding: 120px 20px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        text-shadow: 0 0 20px #7c3aed, 0 0 40px #7c3aed;
+    }
+
+    .hero p {
+        font-size: 22px;
+        margin: 20px 0;
+        opacity: 0.9;
+    }
+
+    /* BOTÃO COM GLOW */
+    .btn {
+        background: linear-gradient(45deg, #7c3aed, #a78bfa);
+        padding: 15px 30px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 0 15px #7c3aed;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        box-shadow: 0 0 25px #a78bfa, 0 0 50px #7c3aed;
+        transform: scale(1.05);
+    }
+
+    .section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature {
+        width: 260px;
+        margin: 20px;
+        padding: 25px;
+        background: rgba(30, 41, 59, 0.6);
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+        backdrop-filter: blur(8px);
+    }
+
+    .feature:hover {
+        box-shadow: 0 0 25px #7c3aed;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        background: #020617;
+    }
+
+    /* BOTÃO FINAL DESTACADO */
+    .final-cta {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #020617, #1e3a8a);
+    }
+
+    .final-cta h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <!-- LOGO -->
+    <div>
+        <img src="logo.jpg" alt="Logótipo CloudMind" height="40">
+    </div>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Funcionalidades</a>
+        <a href="#">Preços</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>CloudMind</h1>
+    <p>Cloud Mind - "A cloud que pensa por ti! "</p>
+    <button class="btn">Experimenta Grátis</button>
+</section>
+
+<section class="section">
+    <h2>Porquê escolher o CloudMind?</h2>
+
+    <div class="features">
+        <div class="feature">
+            <h3>🤖 Inteligência Artificial</h3>
+            <p>Organiza automaticamente os teus ficheiros.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔍 Pesquisa Inteligente</h3>
+            <p>Encontra tudo em segundos.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔒 Segurança</h3>
+            <p>Proteção total dos teus dados.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECÇÃO FINAL COM BOTÃO -->
+<section class="final-cta">
+    <h2>Pronto para revolucionar a tua cloud?</h2>
+    <button class="btn">Começar Teste Grátis</button>
+</section>
+
+<footer>
+    <p>© 2026 CloudMind. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
