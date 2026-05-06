@@ -203,6 +203,36 @@
         font-size: 13px;
         opacity: 0.4;
     }
+    /* ÁREA DO VÍDEO PROMOCIONAL */
+    .video-section {
+        padding: 60px 10%;
+        text-align: center;
+        position: relative;
+    }
+
+    .video-container {
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 50px rgba(124, 58, 237, 0.3); /* Brilho roxo ao redor */
+        border: 1px solid rgba(124, 58, 237, 0.4);
+        background: #000;
+        line-height: 0; /* Remove espaços extra na base do vídeo */
+    }
+
+    .video-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .video-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        color: white;
+    }
 </style>
 </head>
 
@@ -218,10 +248,13 @@
         <a href="#info">Funcionalidades</a>
         <a href="#precos">Preços</a>
         <a href="parceiros.html">Parceiros</a>
+        <a href="Insta.html">Instagram</a>
+        <a href="tiktok.html">TikTok</a>
     </nav>
 </header>
 
 <section class="hero">
+   
     <h1>CloudMind</h1>
     <p class="tagline">"A cloud que pensa por ti!"</p>
     
@@ -231,6 +264,8 @@
         <div class="time-unit"><span id="mins">00</span><label>Min</label></div>
         <div class="time-unit"><span id="secs">00</span><label>Seg</label></div>
     </div>
+
+
 
     <br>
     <!-- Botão Rickroll -->
