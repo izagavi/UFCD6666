@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudMind | Business Plan & Financeiro</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --primary-glow: #7c3aed;
+            --secondary-glow: #a78bfa;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --dark-bg: #020617;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top, #1e3a8a, var(--dark-bg));
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* CABEÇALHO (PADRÃO CLOUDMIND) */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 10%; background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(15px); position: fixed;
+            top: 0; left: 0; right: 0; z-index: 1000; height: 85px;
+            border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+        }
+        .logo-box img { height: 50px; width: auto; }
+        nav { display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: rgba(255, 255, 255, 0.8); font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: var(--secondary-glow); }
+
+        /* CONTEÚDO */
+        .main-container { padding: 150px 10% 80px; }
+        
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h1 { font-size: 40px; text-shadow: 0 0 20px var(--primary-glow); }
+
+        .finance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        .finance-card {
+            background: rgba(30, 41, 59, 0.4);
+            padding: 30px; border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .finance-card h3 { color: var(--secondary-glow); margin-top: 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+
+        /* TABELAS */
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { text-align: left; color: var(--secondary-glow); padding: 12px; border-bottom: 2px solid rgba(124, 58, 237, 0.3); }
+        td { padding: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .price-tag { font-weight: bold; color: var(--accent-green); }
+
+        /* RODAPÉ */
+        footer { background: #010409; padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-box">
+        <img src="logo.jpg" alt="CloudMind Logo">
+    </div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="Estudo.html">Estatísticas</a>
+        <a href="#">Custos</a>
+        <a href="Insta.html">Instagram</a>
+        <a href="tiktok.html">TikTok</a>
+    </nav>
+</header>
+
+<div class="main-container">
+    <div class="section-title">
+        <h1>Planeamento Financeiro AI</h1>
+        <p>Custos de implementação, manutenção e projeção de rentabilidade</p>
+    </div>
+
+    <div class="finance-grid">
+        <div class="finance-card">
+            <h3>🚀 Investimento Inicial (Setup)</h3>
+            <table>
+                <tr><th>Item</th><th>Descrição</th><th>Custo Est.</th></tr>
+                <tr><td>Arquitetura GPU</td><td>Servidores H100 p/ Treino</td><td class="price-tag">45.000€</td></tr>
+                <tr><td>Desenvolvimento</td><td>Engenharia de Prompt e Modelos</td><td class="price-tag">25.000€</td></tr>
+                <tr><td>Segurança Quântica</td><td>Protocolos de Encriptação 2222</td><td class="price-tag">12.000€</td></tr>
+                <tr><td>Marketing</td><td>Campanhas Digitais e Branding</td><td class="price-tag">8.000€</td></tr>
+                <tr style="background: rgba(124, 58, 237, 0.1);"><td><strong>Total</strong></td><td><strong>Investimento de Lançamento</strong></td><td class="price-tag"><strong>90.000€</strong></td></tr>
+            </table>
+        </div>
+
+        <div class="finance-card">
+            <h3>🛠️ Manutenção Mensal (OPEX)</h3>
+            <table>
+                <tr><th>Serviço</th><th>Recorrência</th><th>Custo</th></tr>
+                <tr><td>API de Processamento</td><td>Tokens de IA (LLM)</td><td class="price-tag">1.200€</td></tr>
+                <tr><td>Hospedagem Cloud</td><td>Storage e Largura de Banda</td><td class="price-tag">800€</td></tr>
+                <tr><td>Suporte Técnico</td><td>Monitorização 24/7</td><td class="price-tag">1.500€</td></tr>
+                <tr><td>Atualizações</td><td>Melhoria Contínua do Modelo</td><td class="price-tag">500€</td></tr>
+                <tr style="background: rgba(239, 68, 68, 0.1);"><td><strong>Total Fixo</strong></td><td><strong>Mensalidade Operacional</strong></td><td class="price-tag" style="color: var(--accent-red);"><strong>4.000€</strong></td></tr>
+            </table>
+        </div>
+
+        <div class="finance-card" style="grid-column: 1 / -1;">
+            <h3>📈 Projeção de Receita vs Lucro (12 Meses)</h3>
+            <p style="font-size: 14px; opacity: 0.7;">Baseado no plano de 7.99€/mês e crescimento orgânico de utilizadores.</p>
+            <canvas id="profitChart" style="max-height: 400px;"></canvas>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 CloudMind AI - Divisão Financeira</p>
+</footer>
+
+<script>
+    const ctx = document.getElementById('profitChart').getContext('2d');
+    
+    // Dados simulados: Crescimento de utilizadores reflete na receita
+    const labels = ['Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6', 'Mês 7', 'Mês 8', 'Mês 9', 'Mês 10', 'Mês 11', 'Mês 12'];
+    const revenue = [2000, 3500, 5000, 7500, 10000, 14000, 18000, 22000, 28000, 35000, 42000, 50000];
+    const expenses = [4000, 4200, 4400, 4600, 5000, 5500, 6000, 6500, 7000, 8000, 9000, 10000];
+    const profit = revenue.map((rev, index) => rev - expenses[index]);
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Receita Total (€)',
+                    data: revenue,
+                    borderColor: '#10b981',
+                    backgroundColor: 'transparent',
+                    borderWidth: 3,
+                    tension: 0.3
+                },
+                {
+                    label: 'Despesas (€)',
+                    data: expenses,
+                    borderColor: '#ef4444',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    borderDash: [5, 5],
+                    tension: 0.3
+                },
+                {
+                    label: 'Lucro Líquido (€)',
+                    data: profit,
+                    borderColor: '#7c3aed',
+                    backgroundColor: 'rgba(124, 58, 237, 0.2)',
+                    fill: true,
+                    borderWidth: 3,
+                    tension: 0.3
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { labels: { color: '#fff' } }
+            },
+            scales: {
+                y: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: '#fff' } },
+                x: { grid: { display: false }, ticks: { color: '#fff' } }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
